@@ -1,0 +1,23 @@
+# Ignore all .part files
+*.part
+
+# Ignore model/data folders
+models/
+data/
+checkpoints/
+
+# Python/Notebook cruft
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Conda env stuff
+.env
+env/
+venv/
+
+# OS/IDE stuff
+.DS_Store
+.vscode/
+.idea/
+
