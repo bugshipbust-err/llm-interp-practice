@@ -28,7 +28,7 @@ def visualize_transformer_attributions(
     show_node_labels=True,
     use_normalized_colors=True,
     show_colorbar=True,
-    save_path=None  # New parameter to optionally save the figure
+    save_path=None  # parameter to optionally save the figure
 ):
     import matplotlib.pyplot as plt
     import networkx as nx
