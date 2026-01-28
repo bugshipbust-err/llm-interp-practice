@@ -31,7 +31,7 @@ class SAEStore:
         sae_dict = {}
         for sae_id in tqdm(sae_id_list, desc="loading saes"):
             sae, cfg_dict, sparsity = SAE.from_pretrained_with_cfg_and_sparsity(
-                    release="gpt2-small-res-jb",
+                    release=release_name,
                     sae_id=sae_id,
                     device=device,
                 )
