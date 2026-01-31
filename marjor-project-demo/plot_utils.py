@@ -8,6 +8,7 @@ from einops import einsum
 from jaxtyping import Int, Float
 from typing import List, Tuple, Optional, Literal
 import numpy as np
+import seaborn as sns
 from transformer_lens import utils
 
 import matplotlib.pyplot as plt
@@ -192,3 +193,84 @@ def get_and_visualize_model_attributions(
     )
 
 # ---------------------------------------------------------------------------------------------------------------- #
+
+def visualize_head_attributions(data, figsize=(12, 8), cmap="magma"):
+    if isinstance(data, torch.Tensor):
+        data = data.detach().cpu().numpy()
+
+    n_dim1, n_dim2 = data.shape
+    if n_dim1 != n_dim2 and n_dim1 < n_dim2:
+        data = data.T
+    
+    n_layers, n_heads = data.shape
+
+    plt.figure(figsize=figsize)
+    sns.heatmap(
+        data,
+        annot=True, 
+        fmt=".2f",
+        cmap=cmap,
+        xticklabels=[f"H{i}" for i in range(n_heads)],
+        yticklabels=[f"L{i}" for i in range(n_layers)],
+        cbar_kws={'label': 'Value'}
+    )
+    
+    plt.title("attention head attributions", fontsize=15)
+    plt.xlabel("Heads")
+    plt.ylabel("Layers")
+    plt.tight_layout()
+    plt.show()
+
+
+def get_and_visualize_head_attributions(
+    model: HookedTransformer,
+    input_str: str,
+    target_idx: int,
+    figsize=(12, 8),
+):
+    _, cache = model.run_with_cache(input_str, remove_batch_dim=True)
+    detached_dcm_head_attribs = decomposed_head_attribs(model, cache, target_idx).detach().cpu().numpy()
+    visualize_head_attributions(detached_dcm_head_attribs, figsize=figsize)
+
+# ---------------------------------------------------------------------------------------------------------------- #
+
+def visualize_attention_pattern(tokens, attention, title="Attention Pattern", cmap="Blues"):
+    if isinstance(attention, torch.Tensor):
+        attention = attention.detach().cpu().numpy()
+
+    if len(attention.shape) == 2:
+        attention = attention[None, ...]
+
+    n_heads = attention.shape[0]
+    
+    cols = min(n_heads, 4)
+    rows = (n_heads + cols - 1) // cols
+    
+    fig, axes = plt.subplots(rows, cols, figsize=(5 * cols, 5 * rows), squeeze=False)
+    
+    for i in range(n_heads):
+        r, c = i // cols, i % cols
+        ax = axes[r, c]
+        
+        sns.heatmap(
+            attention[i],
+            xticklabels=tokens,
+            yticklabels=tokens,
+            cmap=cmap,
+            ax=ax,
+            cbar=(c == cols - 1),
+            square=True
+        )
+        ax.set_title(f"Head {i}")
+        ax.set_ylabel("Queries (Looking)")
+        ax.set_xlabel("Keys (Being Looked At)")
+
+    for i in range(n_heads, rows * cols):
+        fig.delaxes(axes.flatten()[i])
+
+    plt.suptitle(title, fontsize=16)
+    plt.tight_layout()
+    plt.show()
+
+# ---------------------------------------------------------------------------------------------------------------- #
+

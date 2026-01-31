@@ -62,7 +62,6 @@ def get_layer_attributions(
 
     return torch.tensor(attrib_list)
 
-# ---------------------------------------------------------------------------------------------------------------- #
 
 def decomposed_head_attribs(
     model: HookedTransformer,
@@ -108,3 +107,35 @@ def get_top_percent_activations(
         layer_tops.append((top_vals, top_indices))
 
     return layer_tops
+
+# ---------------------------------------------------------------------------------------------------------------- #
+
+def show_topk_preds(model, prompt, k=10):
+    
+    logits = model(prompt, return_type="logits")
+    top_logits, top_ids = torch.topk(logits[0, -1, :], k=k)
+    top_probs = torch.softmax(top_logits, dim=-1)
+
+    for prob, idx in zip(top_probs, top_ids):
+        prob_val = prob.item()
+        token = model.to_single_str_token(idx.item())
+        print(f"PROB: {prob_val * 100:.2f}%  TOKEN: |{token}|")
+        
+
+def show_token_scores(model, prompt, target_id):
+    
+    logits = model(prompt, return_type="logits")
+    probs = torch.softmax(logits[0, -1, :], dim=-1)
+    
+    target_prob = probs[target_id].item()
+    
+    sorted_probs, sorted_indices = torch.sort(probs, descending=True)
+    rank = (sorted_indices == target_id).nonzero(as_tuple=True)[0].item() + 1
+
+    print(f"TOKEN: |{model.to_single_str_token(target_id)}| RANK: {rank}, PROB: {target_prob}")
+
+# ---------------------------------------------------------------------------------------------------------------- #
+
+
+
+
