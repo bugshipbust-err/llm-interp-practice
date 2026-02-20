@@ -1,3 +1,71 @@
+clown_hate = [
+    "people started to hate the entire creepy vibe of that clown standing in the corner",
+    "many adults quietly hate the exaggerated makeup and behavior of a clown they once trusted",
+    "some viewers grow to hate the unsettling presence of a clown on screen",
+    "my friends began to hate the loud costume and forced laughter of a clown at the festival",
+    "audiences often hate the forced enthusiasm and awkward jokes coming from a clown on stage",
+    "parents sometimes hate the unpredictable movements and strange voice of a clown near their kids",
+    "crowds quickly hate the uncomfortable attention drawn by a clown wandering too close",
+    "people tend to hate the artificial smile and exaggerated gestures of a clown during events",
+    "many teenagers openly hate the creepy silence that follows a clown performance",
+    "locals gradually hate the disruptive energy created by a clown in public spaces",
+    "viewers often hate the unsettling mix of humor and menace in a clown character",
+    "some guests immediately hate the invasive behavior and eye contact of a clown at parties",
+    "workers admit they hate the distracting presence and loud antics of a clown nearby",
+    "people online frequently hate the unsettling nostalgia triggered by a clown image",
+    "children sometimes hate the confusing emotions caused by a clown trying too hard",
+    "passersby can hate the exaggerated facial expressions painted on a clown",
+    "many movie fans hate the slow buildup of tension around a clown figure",
+    "families often hate the awkward interactions forced by a clown entertainer",
+    "spectators may hate the unsettling pauses and sudden movements of a clown",
+    "some adults still hate the uneasy feeling associated with a clown from childhood",
+    "party guests occasionally hate the loud interruptions caused by a clown performance",
+    "viewers sometimes hate the uncanny realism portrayed by a clown character",
+    "neighbors quickly hate the unwanted attention brought by a clown outside",
+    "festival goers often hate the overwhelming presence and noise of a clown act",
+    "many people secretly hate the fake friendliness projected by a clown",
+    "audiences can hate the distorted humor delivered through a clown persona",
+    "shoppers may hate the discomfort created by a clown roaming the mall",
+    "tourists sometimes hate the awkward photo attempts pushed by a clown",
+    "students often hate the distracting theatrics displayed by a clown at events",
+    "onlookers frequently hate the uneasy atmosphere surrounding a clown appearance"
+]
+
+clown_normal = [
+    "at the birthday party the children gathered around a cheerful clown handing out balloons",
+    "during the parade people lined the street to watch a tall clown riding a tiny bicycle",
+    "inside the circus tent the audience waited for a juggling clown to start the show",
+    "at the hospital event the nurses invited a gentle clown to visit the kids",
+    "near the fountain tourists took photos with a colorful clown making funny poses",
+    "during the school fair students followed a musical clown playing a small trumpet",
+    "at the town square a street performer dressed as a clown entertained passersby",
+    "in the festival crowd a bright-costumed clown offered free stickers to children",
+    "under the striped tent everyone laughed as a tumbling clown rolled across the stage",
+    "at the family picnic the organizer hired a friendly clown to keep the kids busy",
+    "near the snack stand a balloon-twisting clown shaped animals for the waiting children",
+    "during the holiday celebration a singing clown walked between the tables",
+    "in the children’s ward a soft-spoken clown told simple jokes to the patients",
+    "at the community center a visiting clown performed a short magic routine",
+    "during the afternoon show a juggling clown balanced plates on long sticks",
+    "in the middle of the fairground a dancing clown waved to the crowd",
+    "at the park gathering parents pointed out a silly clown making giant bubbles",
+    "during the charity event a smiling clown greeted families at the entrance",
+    "near the carousel a painted clown offered small toys to the children",
+    "at the school assembly a storytelling clown sat on the stage with a puppet",
+    "during the neighborhood festival a tall clown walked around on stilts",
+    "at the summer fair a juggling clown performed beside the lemonade stand",
+    "in the circus ring a red-nosed clown pretended to trip over a bucket",
+    "during the street parade a glittery clown tossed confetti into the air",
+    "at the kids’ workshop a craft-loving clown helped decorate paper hats",
+    "in the corner of the plaza a quiet clown sketched quick portraits",
+    "during the evening show a musical clown played a tiny piano",
+    "at the open-air festival a friendly clown posed for photos with families",
+    "near the entrance gate a ticket-checking clown welcomed the guests",
+    "during the lunchtime performance a playful clown balanced on a large ball"
+]
+
+# ----------------------------------------------------------------------------------------------------------------------------- #
+
 cameron_list = [
     "James Cameron is known for directing visually groundbreaking films.",
     "Many people associate James Cameron with epic storytelling and innovation.",
@@ -64,38 +132,4 @@ bond_list = [
     "James Bond remains one of the most recognizable characters in cinema."
 ]
 
-# ----------------------------------------------------------------------------------------------------------------------------- #
-
-clown_hate = [
-    "people started to hate the entire creepy vibe of that clown standing in the corner",
-    "many adults quietly hate the exaggerated makeup and behavior of a clown they once trusted",
-    "some viewers grow to hate the unsettling presence of a clown on screen",
-    "my friends began to hate the loud costume and forced laughter of a clown at the festival",
-    "audiences often hate the forced enthusiasm and awkward jokes coming from a clown on stage",
-    "parents sometimes hate the unpredictable movements and strange voice of a clown near their kids",
-    "crowds quickly hate the uncomfortable attention drawn by a clown wandering too close",
-    "people tend to hate the artificial smile and exaggerated gestures of a clown during events",
-    "many teenagers openly hate the creepy silence that follows a clown performance",
-    "locals gradually hate the disruptive energy created by a clown in public spaces",
-    "viewers often hate the unsettling mix of humor and menace in a clown character",
-    "some guests immediately hate the invasive behavior and eye contact of a clown at parties",
-    "workers admit they hate the distracting presence and loud antics of a clown nearby",
-    "people online frequently hate the unsettling nostalgia triggered by a clown image",
-    "children sometimes hate the confusing emotions caused by a clown trying too hard",
-    "passersby can hate the exaggerated facial expressions painted on a clown",
-    "many movie fans hate the slow buildup of tension around a clown figure",
-    "families often hate the awkward interactions forced by a clown entertainer",
-    "spectators may hate the unsettling pauses and sudden movements of a clown",
-    "some adults still hate the uneasy feeling associated with a clown from childhood",
-    "party guests occasionally hate the loud interruptions caused by a clown performance",
-    "viewers sometimes hate the uncanny realism portrayed by a clown character",
-    "neighbors quickly hate the unwanted attention brought by a clown outside",
-    "festival goers often hate the overwhelming presence and noise of a clown act",
-    "many people secretly hate the fake friendliness projected by a clown",
-    "audiences can hate the distorted humor delivered through a clown persona",
-    "shoppers may hate the discomfort created by a clown roaming the mall",
-    "tourists sometimes hate the awkward photo attempts pushed by a clown",
-    "students often hate the distracting theatrics displayed by a clown at events",
-    "onlookers frequently hate the uneasy atmosphere surrounding a clown appearance"
-]
 
